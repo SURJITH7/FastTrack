@@ -65,7 +65,7 @@ function Home() {
       {/* =========================
           FEATURED WATCHES
       ========================= */}
-      {/* <section className="featured-section">
+      <section className="featured-section">
         <div className="section-heading">
           <h2>SHOP BY CATEGORY</h2>
           <span>
@@ -137,9 +137,9 @@ function Home() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      <section className="featured-section">
+      {/* <section className="featured-section">
         <div className="section-heading">
           <h2>SHOP BY CATEGORY</h2>
           <span>
@@ -148,7 +148,7 @@ function Home() {
         </div>
         <div className="watch-grid">
           <div className="watch-image">
-              <div>
+              <div className="watch-card">
                 <img
                   src={watchp}
                   alt="FastTrack Premium Watch"
@@ -209,7 +209,7 @@ function Home() {
             
 
         </div>
-      </section>
+      </section> */}
 
       {/* =========================
           WHY FASTTRACK
