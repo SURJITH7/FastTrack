@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Watches from "./pages/Watches";
 import Contact from "./pages/Contact";
@@ -11,15 +11,6 @@ import CartPage from "./pages/CartPage";
 import WishList  from "./pages/WishList";
 
 function App() {
-
-  // let count=0
-
-  // const [count , setcount]=useState(0)
-
-  // const inc=()=>{
-  //   setcount(count+1)
-  //   console.log(count)
-  // }
 
   return (
 
@@ -52,7 +43,7 @@ function App() {
           element={<Contact />}
         /> 
         <Route 
-        path="/CartPage"
+        path="/Cart"
         element={<CartPage/>}
         />
         <Route 
