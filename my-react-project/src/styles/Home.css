@@ -180,7 +180,11 @@
 }
 
 .watch-card.active {
-  background: rgba(45, 71, 62, 0.4);
+  background-color: rgba(45, 71, 62, 0.4);
+}
+
+.watch-card:hover {
+  background-color: rgba(89, 169, 141, 0.4);
 }
 
 .watch-card-image {

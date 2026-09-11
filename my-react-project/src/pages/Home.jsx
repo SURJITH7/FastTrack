@@ -7,18 +7,18 @@ import watchh from "../assets/images/watch1.png";
 import watchp from "../assets/images/watchpremium.png";
 import watchs from "../assets/images/sportwatch.png";
 import watchb from "../assets/images/watchbanner.png";
-import back from "../assets/images/background_img.png";
+import digital from "../assets/images/digital.png";
 import { useState } from "react"; 
 
 function Home() {
    const [activeCard, setActiveCard] = useState(0);
    const categories = [
-  { id: 0, name: "Analog", image: watchh, secondaryImage: back, price: "₹2,499" },
-  { id: 1, name: "Smart Watch", image: watchp, price: "₹3,999" },
-  { id: 2, name: "Digital", image: watchs, price: "₹2,999" },
+  { id: 0, name: "Analog", image: watchh,  price: "₹2,499" },
+  { id: 1, name: "Smart Watch", image: watchp,  price: "₹3,999" },
+  { id: 2, name: "Digital", image: digital,  price: "₹2,999" },
   { id: 3, name: "Chronograph", image: watchh, price: "₹3,499" },
   { id: 4, name: "Automatic", image: watchp, price: "₹4,499" },
-  { id: 5, name: "Ana-Digi", image: watchs, price: "₹2,799" },
+  { id: 5, name: "Sport Watch", image: watchs, price: "₹2,799" },
 ];
 
   return (
@@ -74,113 +74,50 @@ function Home() {
         </div>
       </div>
 
-      {/* =========================
-          FEATURED WATCHES
-      ========================= */}
-      
-      {/* <section className="featured-section">
+      <section className="featured-section">
         <div className="section-heading">
           <h2>SHOP BY CATEGORY</h2>
           <span>
             Discover watches designed to match every moment.
           </span>
         </div>
-
+ 
         <div className="watch-grid">
-
-          <div
-            className={`watch-card ${activeCard === 0 ? "active" : ""}`}
-            onClick={() => setActiveCard(0)}
-          >
-            <div className="watch-card-image">
-              <img
-                src={watchh}
-                alt="FastTrack Classic Watch"
-                className="img-primary"
-              />
-              <img src={back} alt="alternate image" className="img-secondary" />
+          {categories.map((cat) => (
+            <div
+              key={cat.id}
+              // className="watch-card"
+              className={`watch-card ${activeCard === cat.id ? "active" : ""}`}
+              // onClick={() => setActiveCard(cat.id)}
+              onMouseEnter={() => setActiveCard(cat.id)}
+              onMouseLeave={() => setActiveCard(null)}
+              onTouchStart={() => setActiveCard(cat.id)}
+            >
+              <div className="watch-card-image">
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  className={cat.secondaryImage ? "img-primary" : ""}
+                />
+                {/* {cat.secondaryImage && (
+                  <img src={cat.secondaryImage} alt="alternate" className="img-secondary" />
+                )} */}
+              </div>
+              <h3>{cat.name}</h3>
+              <Link to="/watches" className="price-link">{cat.price}</Link>
             </div>
-            <h3>Analog Watch</h3>
-            <Link to="/watches" className="price-link">₹2,499</Link>
-          </div>
-
-          <div
-            className={`watch-card ${activeCard === 1 ? "active" : ""}`}
-            onClick={() => setActiveCard(1)}
-          >
-            <div className="watch-card-image">
-              <img src={watchp} alt="FastTrack Premium Watch" />
-            </div>
-            <h3>Smart Watch</h3>
-            <Link to="/watches" className="price-link">₹3,999</Link>
-          </div>
-
-          <div
-            className={`watch-card ${activeCard === 2 ? "active" : ""}`}
-            onClick={() => setActiveCard(2)}
-          >
-            <div className="watch-card-image">
-              <img src={watchs} alt="FastTrack Sport Watch" />
-            </div>
-            <h3>Digital Watch</h3>
-            <Link to="/watches" className="price-link">₹2,999</Link>
-          </div>
-
+          ))}
         </div>
-
+      
         <div className="category-dots">
-          {[0, 1, 2].map((i) => (
+          {categories.map((cat) => (
             <span
-              key={i}
-              className={`dot ${activeCard === i ? "active" : ""}`}
-              onClick={() => setActiveCard(i)}
+              key={cat.id}
+              className={`dot ${activeCard === cat.id ? "active" : ""}`}
+              onClick={() => setActiveCard(cat.id)}
             ></span>
           ))}
         </div>
-
-      </section> */}
-
-      <section className="featured-section">
-  <div className="section-heading">
-    <h2>SHOP BY CATEGORY</h2>
-    <span>
-      Discover watches designed to match every moment.
-    </span>
-  </div>
- 
-  <div className="watch-grid">
-    {categories.map((cat) => (
-      <div
-        key={cat.id}
-        className={`watch-card ${activeCard === cat.id ? "active" : ""}`}
-        onClick={() => setActiveCard(cat.id)}
-      >
-        <div className="watch-card-image">
-          <img
-            src={cat.image}
-            alt={cat.name}
-            className={cat.secondaryImage ? "img-primary" : ""}
-          />
-          {cat.secondaryImage && (
-            <img src={cat.secondaryImage} alt="alternate" className="img-secondary" />
-          )}
-        </div>
-        <h3>{cat.name}</h3>
-        <Link to="/watches" className="price-link">{cat.price}</Link>
-      </div>
-    ))}
-  </div>
- 
-  {/* DOT PAGINATION — no arrows */}
-  <div className="category-dots">
-    {categories.map((cat) => (
-      <span
-        key={cat.id}
-        className={`dot ${activeCard === cat.id ? "active" : ""}`}
-        onClick={() => setActiveCard(cat.id)}
-      ></span>
-    ))}
-  </div>
  
 </section>
 
