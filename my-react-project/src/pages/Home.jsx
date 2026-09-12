@@ -8,6 +8,8 @@ import watchp from "../assets/images/watchpremium.png";
 import watchs from "../assets/images/sportwatch.png";
 import watchb from "../assets/images/watchbanner.png";
 import digital from "../assets/images/digital.png";
+import chrono from "../assets/images/chrono.png";
+import automatic from "../assets/images/automatic.png";
 import { useState } from "react"; 
 
 function Home() {
@@ -16,8 +18,8 @@ function Home() {
   { id: 0, name: "Analog", image: watchh,  price: "₹2,499" },
   { id: 1, name: "Smart Watch", image: watchp,  price: "₹3,999" },
   { id: 2, name: "Digital", image: digital,  price: "₹2,999" },
-  { id: 3, name: "Chronograph", image: watchh, price: "₹3,499" },
-  { id: 4, name: "Automatic", image: watchp, price: "₹4,499" },
+  { id: 3, name: "Chronograph", image: chrono, price: "₹3,499" },
+  { id: 4, name: "Automatic", image: automatic, price: "₹4,499" },
   { id: 5, name: "Sport Watch", image: watchs, price: "₹2,799" },
 ];
 

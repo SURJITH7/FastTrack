@@ -26,7 +26,7 @@ function Footer() {
 
           <div className="footer-socials">
 
-            <a href="#" aria-label="Facebook">
+            <a href="#" className="face" aria-label="Facebook">
               <FaFacebookF />
             </a>
 
@@ -34,19 +34,23 @@ function Footer() {
               <FaXTwitter />
             </a>
 
-            <a href="#" aria-label="Instagram">
+            <a href="#" className="insta" aria-label="Instagram">
               <FaInstagram />
             </a>
 
-            <a href="#" aria-label="YouTube">
+            <a href="#" className="you" aria-label="YouTube">
               <FaYoutube />
             </a>
 
-            <a href="#" aria-label="Pinterest">
+            <a href="#" className="pin" aria-label="Pinterest">
               <FaPinterestP />
             </a>
 
           </div>
+
+          <p className="operating-hours">
+            Operating Hours: 10:00AM To 10:00PM Monday To Sunday..
+          </p>
 
         </div>
 
@@ -54,16 +58,32 @@ function Footer() {
         {/* Quick Links */}
         <div className="footer-column">
 
-          <h3>Quick Links</h3>
+          <h3>Collections</h3>
 
-          <Link to="/">Home</Link>
+          <Link to="/watches">Analog</Link>
 
-          <Link to="/about">About</Link>
+          <Link to="/watches">Smart Watch</Link>
 
-          <Link to="/watches">Collection</Link>
+          <Link to="/watches">Digital</Link>
 
-          <Link to="/contact">Contact</Link>
+          <Link to="/watches">Chronograph</Link>
 
+          <Link to="/watches">Automatic</Link>
+        </div>
+
+        <div className="footer-column">
+
+          <h3>About Fasttrack</h3>
+
+          <Link to="/about">Brand Protection</Link>
+
+          <Link to="/watches">Smart Watch</Link>
+
+          <Link to="/watches">Digital</Link>
+
+          <Link to="/watches">Chronograph</Link>
+
+          <Link to="/watches">Automatic</Link>
         </div>
 
 

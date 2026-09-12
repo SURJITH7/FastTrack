@@ -1436,7 +1436,7 @@ CartPage
 .site-footer {
   background: #d8ccb3;
   color: #000000;
-  padding: 75px 8% 0;
+  padding: 55px 5% 0;
 }
 
 
@@ -1447,11 +1447,11 @@ CartPage
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.3fr 1.3fr;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
 
-  gap: 70px;
+  gap: 55px;
 
-  padding-bottom: 65px;
+  padding-bottom: 45px;
 }
 
 
@@ -1460,16 +1460,16 @@ CartPage
 .footer-brand h2 {
   margin: 0;
 
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
 
   letter-spacing: 1px;
 }
 
 .footer-brand > p {
-  margin-top: 12px;
+  margin-top: 25px;
 
-  color: #232323;
+  color: #ebeaea;
 
   font-size: 14px;
   letter-spacing: 3px;
@@ -1500,7 +1500,7 @@ CartPage
   border-radius: 50%;
 
   color: #817d7d;
-
+  margin-right: 0;
   font-size: 16px;
 
   text-decoration: none;
@@ -1516,7 +1516,47 @@ CartPage
 
   transform: translateY(-4px);
 }
+.footer-socials .face:hover {
+  background: #1877f2;
+  color: #fff;
+  border-color: #1877f2;
+}
+.footer-socials .insta:hover {
+  background: linear-gradient(
+  65deg,
+  #833AB4,
+  #E1306C,
+  #F77737,
+  #FCAF45
+);
+  color: #fff;
+  border-color: #fe4270;
+}
+.footer-socials .you:hover {
+  background: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+}
+.footer-socials .pin:hover {
+  background: #e60023;
+  color: #fff;
+  border-color: #e60023;
+}
+.footer-brand .operating-hours {
+  margin-top: 10px;
 
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
 
 /* Footer Columns */
 
@@ -1541,7 +1581,7 @@ CartPage
   width: fit-content;
 
   margin-bottom: 13px;
-
+  align-items: center;
   color: #999;
 
   font-size: 15px;
@@ -1553,6 +1593,7 @@ CartPage
 
 .footer-column a:hover {
   color: #ffffff;
+  transform: translateX(3px);
 }
 
 
